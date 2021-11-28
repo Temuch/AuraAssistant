@@ -127,35 +127,59 @@ if(menuLinks.length > 0) {
         }
     }
 }
-
-/* Form */
-$(function(){
-    $(".knopka-1").click(function(){
-      var recognizer = new webkitSpeechRecognition();
-      // Ставим опцию, чтобы распознавание началось ещё до того, как пользователь закончит говорить
-      recognizer.interimResults = true;
-      // Какой язык будем распознавать?
-      recognizer.lang = 'ru-Ru';
-      // Используем колбек для обработки результатов
-      recognizer.onresult = function (event) {
-        var result = event.results[event.resultIndex];
-        if (result.isFinal) {
-          alert('Вы сказали: ' + result[0].transcript);
-        } else {
-          console.log('Промежуточный результат: ', result[0].transcript);
+async function getjob(body) {
+    const response = await fetch("http://ai-vacancy.ru:8070/text/", {
+            "headers": {
+              "accept": "application/json",
+              "accept-language": "ru,en;q=0.9,es;q=0.8",
+              "content-type": "application/json",
+              "sec-ch-ua": "\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Yandex\";v=\"21\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-fetch-dest": "empty",
+              "sec-fetch-mode": "cors",
+              "sec-fetch-site": "none"
+            },
+            "referrerPolicy": "strict-origin-when-cross-origin",
+            "body": body,
+            "method": "POST",
+            "mode": "cors",
+            "credentials": "omit"
+          });
+  
+    const res = await response.json();
+    console.log(res);
+    $("div#auraa").text(res.answer.answer);
+    console.log(response)
         }
-      };
+$(function(){
 
-      // Начинаем слушать микрофон и распознавать голос
-      recognizer.start();
-      recognizer.onresult = function(event) {
-        console.log("Result")
-        console.log(event.results)
-      }
-
-      });
       $(".knopka-2").click(function(){
-      $(".block-1").fadeOut(1);
-      $(".block-2").fadeIn(100);
+      
+        console.log("click")
+        var recognizer = new webkitSpeechRecognition();
+        // Ставим опцию, чтобы распознавание началось ещё до того, как пользователь закончит говорить
+        recognizer.interimResults = true;
+        // Какой язык будем распознавать?
+        recognizer.lang = 'ru-Ru';
+        // Используем колбек для обработки результатов
+        recognizer.onresult = function (event) {
+          var result = event.results[event.resultIndex];
+          if (result.isFinal) {
+                
+                res = result[0].transcript;
+                console.log(res);
+                var inp = document.getElementById("userr");
+                inp.innerText = res;
+                obj = {request: res };
+	            body = JSON.stringify(obj);
+                resp = getjob(body);
+            };
+        }
+        
+        // Начинаем слушать микрофон и распознавать голос
+        recognizer.start();
+
+
     });
 });
+
