@@ -131,8 +131,28 @@ if(menuLinks.length > 0) {
 /* Form */
 $(function(){
     $(".knopka-1").click(function(){
-      $(".block-2").fadeOut(1);
-      $(".block-1").fadeIn(100);
+      var recognizer = new webkitSpeechRecognition();
+      // Ставим опцию, чтобы распознавание началось ещё до того, как пользователь закончит говорить
+      recognizer.interimResults = true;
+      // Какой язык будем распознавать?
+      recognizer.lang = 'ru-Ru';
+      // Используем колбек для обработки результатов
+      recognizer.onresult = function (event) {
+        var result = event.results[event.resultIndex];
+        if (result.isFinal) {
+          alert('Вы сказали: ' + result[0].transcript);
+        } else {
+          console.log('Промежуточный результат: ', result[0].transcript);
+        }
+      };
+
+      // Начинаем слушать микрофон и распознавать голос
+      recognizer.start();
+      recognizer.onresult = function(event) {
+        console.log("Result")
+        console.log(event.results)
+      }
+
       });
       $(".knopka-2").click(function(){
       $(".block-1").fadeOut(1);
