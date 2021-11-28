@@ -1,0 +1,121 @@
+/* DECISION START / НАЧАЛО БЛОКА "РЕШЕНИЕ" */
+.decision_inner {
+	margin-top: 25px;
+    width: 600px;
+    background: linear-gradient(45deg, #19133A, #242F48);
+    border-radius: 50px;
+    padding-bottom: 40px;
+}
+
+.decision_title {
+    white-space: nowrap;
+	color: #FFFCFD;
+	font-weight: 800;
+	font-size: 36px;
+    text-align: center;
+    padding: 40px 0;
+	letter-spacing: 0.2px;
+}
+
+.decision_title span {
+    display: inline;
+    border-bottom: 6px solid #8EB5F0;
+}
+.decision_aura {
+    background-color: #0A0E1F;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 30px;
+    width: 400px;
+    left: 25px;
+    position: relative;
+}
+
+.decision_aura_text {
+	color: #B8B8B8;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+
+    line-height: 26px;
+	letter-spacing: 0.2px;
+}
+
+.decision_client {
+    background-color: #613DC1;
+    padding: 20px;
+    border-radius: 30px;
+    width: 400px;
+    left: 125px;
+    position: relative;
+}
+
+.decision_client_text {
+	color: #FFFCFD;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.decision_button {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    cursor: pointer;
+}
+
+.decision_button img{
+    width: 100px;
+    height: 100px;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition:         transform .8s ease-in-out;
+}
+
+.decision_button img:hover {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+}
+
+.block-1 {
+    padding: 25px;
+}
+
+.block-2 {
+    padding: 25px;
+    display: none;
+}
+
+.knopka {
+    margin-top: 30px;
+}
+
+.form_button {
+	font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    font-weight: 700;
+    font-size: 24px;
+
+    color: #FFFCFD;
+    padding: 15px 25px;
+    margin: 0px auto;
+    margin-top: 40px;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    
+    background-image: linear-gradient(to left, #613DC1 0%, #8EB5F0 50%, #613DC1 100%);
+    background-size: 200% auto;
+    transition: .5s;
+}
+
+.form_button:hover {
+    background-position: right center;
+}
+/* DECISION END / КОНЕЦ БЛОКА "РЕШЕНИЕ" */

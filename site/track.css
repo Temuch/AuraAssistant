@@ -1,0 +1,45 @@
+/* TRACK START / НАЧАЛО БЛОКА "ТРЕК" */
+.track_inner {
+	margin-top: 25px;
+}
+
+.track_point {
+    display: flex;
+}
+
+.track_point img {
+    height: 130px;
+	vertical-align: middle;
+}
+
+.track_point_text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: left;
+	margin: auto;
+}
+
+.track_point_text h3 {
+	font-family: 'Ubuntu', sans-serif;
+    white-space: nowrap;
+	color: #858AE3;
+	font-weight: 800;
+	font-size: calc(10px + 14 * (100vw / 1280));
+	/*font-size: 34px;*/
+}
+
+.track_point_text p {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 600;
+	font-size: calc(16px + 6 * (100vw / 1280));
+	/*font-size: 24px;*/
+
+	vertical-align: middle;
+	color: #FFFCFD;
+	margin: auto;
+	line-height: 26px;
+	margin-top: 10px;
+	letter-spacing: 0.2px;
+}
+/* TRACK END / КОНЕЦ БЛОКА "ТРЕК" */
