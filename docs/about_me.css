@@ -1,0 +1,49 @@
+/* ABOUT ME START / НАЧАЛО БЛОКА "ОБ АУРЕ" */
+.about_me_inner {
+	display: flex;
+	justify-content: center;
+	margin-top: 25px;
+	vertical-align: middle;
+	align-items: center;
+}
+
+.photo img {
+	width: auto;
+	height: 300px;
+	object-fit: cover;
+	filter: drop-shadow(0 0px 70px #ca75ff49);
+	transition: 0.5s;
+	display: flex;
+	align-items: center;
+	vertical-align: middle;
+}
+
+.photo img:hover {
+	-webkit-transform: translateX(-7px);
+	transform: translateX(-7px), translateY(-7px);
+}
+
+.about_me_text {
+	margin-left: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: left;
+}
+
+.about_me_text div {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 600;
+	font-size: calc(16px + 6 * (100vw / 1280));
+	/*font-size: 24px;*/
+	vertical-align: center;
+	color: #FFFCFD;
+	line-height: 26px;
+	letter-spacing: 0.2px;
+}
+
+.about_me_text div span {
+	color: #858AE3;
+	font-weight: 700;
+}
+/* ABOUT ME END / КОНЕЦ БЛОКА "ОБ АУРЕ" */

@@ -1,0 +1,81 @@
+/* Universal styles / Универсальные стили */
+body {  
+	font-family: 'Ubuntu', sans-serif;
+   	font-size: 15px;
+   	color: #FFFCFD;
+	margin: 0;
+	padding: 0;
+	background-color: #010511;
+}
+
+body._lock {  
+	overflow: hidden;
+}
+
+ *,
+ *:before
+ *:after {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0;
+}
+
+p {
+	line-height: 26px;
+}
+
+.title {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 800;
+	font-size: calc(24px + 24 * (100vw / 1280));
+	/*font-size: 48px;*/
+	color: #613DC1;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.subtitle {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 700;
+	font-size: calc(12px + 6 * (100vw / 1280));
+	/*font-size: 18px;*/
+	color: #B8B8B8;
+	text-align: center;
+	padding: 20px 0 10px 0;
+}
+
+.block {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	text-align: left;
+	padding: 40px 0;
+}
+
+/* Container / Контейнер */
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+/* Scrollba / Скролл */
+body::-webkit-scrollbar {
+	width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+	background-color: #0A0E1F;
+	cursor: pointer;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #613DC1;
+	background-size: contain;
+	border-radius: 30px;
+}
